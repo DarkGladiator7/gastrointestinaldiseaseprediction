@@ -8,7 +8,13 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const data = useLoaderData();
 
-  const banner = ['https://mir-s3-cdn-cf.behance.net/project_modules/fs/196b1e150744213.62ff81a0c9937.jpg', second, third, fourth];
+  const banner = [
+    "https://mir-s3-cdn-cf.behance.net/project_modules/fs/196b1e150744213.62ff81a0c9937.jpg",
+    
+    "https://knowledge.wharton.upenn.edu/wp-content/uploads/2019/08/082919_heartstethoscope_socialdeterminantshealth.jpg",
+    "https://foodinsight.org/wp-content/uploads/2017/10/iStock-589415708_0.jpg",
+    "https://mir-s3-cdn-cf.behance.net/project_modules/fs/94de4269487613.5f46643e66442.jpg",
+  ];
   return (
     <div>
       <Fade>
@@ -19,7 +25,7 @@ const Home = () => {
             <h2 className="text-2x1 bg-black text-white py-2 w-80 text-center">
               Gastrointestinal Diseases and Healthcare
             </h2>
-            <p className="text-gray-700 font-semibold">
+            <p className="text-gray-700  text-lg">
               Gastrointestinal (GI) diseases refer to a wide range of conditions
               that affect the digestive system, which includes the esophagus,
               stomach, small intestine, large intestine, liver, gallbladder, and

@@ -2,15 +2,16 @@ import React from "react";
 import { cartImg, logo, userLogo } from "../assests";
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
-  
   return (
     <div className="w-full h-20 bg-white rounded-full   border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
         <Link to="/">
           <div className=" cursor-pointer">
-            <img className="w-60" src={logo} alt="logo" />
+            <img className="w-60 relative pb-3" src={logo} alt="logo" />
+            <p className="absolute text-base font-bold inset-14 pl-16 pt-1 ">
+              Where health meets innovation
+            </p>
           </div>
         </Link>
         <div className="flex items-center gap-8">

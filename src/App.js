@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 
 import { productsData } from "./Firebase/Api";
+import Diseases from "./pages/Diseases";
 const Layout = () => {
   return (
     <div>
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: productsData,
+      },
+      {
+        path: "/diseases",
+        element: <Diseases />,
       },
     ],
   },

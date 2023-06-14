@@ -3,6 +3,7 @@ import { Fade } from "react-reveal";
 import { Button, animateScroll as scroll } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 import { simple } from "../assests";
+import { Link } from "react-router-dom";
 
 const ScrollTransitionImage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,10 +41,10 @@ const ScrollTransitionImage = () => {
               ref={imageRef}
               src={simple}
               alt="Image"
-              className="transition-transform ml-10 w-[500px] h-[300px] duration-500 "
+              className="transition-transform rounded-full ml-10 w-[500px] h-[300px] duration-500 "
             />
-            <div className="mt-20">
-              <p className="text-gray-700 font-semibold ">
+            <div className="pt-20">
+              <p className="text-gray-700  ">
                 Regular check-ins with gastroenterologists are important for
                 maintaining gastrointestinal health. Gastroenterologists
                 specialize in diagnosing and treating diseases of the digestive
@@ -64,7 +65,7 @@ const ScrollTransitionImage = () => {
         <Fade when={inView}>
           <div className="flex flex-row justify-around gap-3">
             <div className="mt-20 ml-10">
-              <p className="text-gray-700 font-semibold ">
+              <p className="text-gray-700  ">
                 Gastrointestinal diseases can have serious implications on an
                 individual's health and well-being. These conditions affect the
                 digestive system, including the esophagus, stomach, intestines,
@@ -84,14 +85,17 @@ const ScrollTransitionImage = () => {
               ref={imageRef1}
               src="https://www.sonambekarhospital.com/wp-content/uploads/2021/08/gastrointestinal-diseases.jpg"
               alt="Image"
-              className="transition-transform mr-10 w-[500px] h-[300px] duration-500 "
+              className="transition-transform  rounded-full mr-10 w-[500px] h-[300px] duration-500 "
             />
           </div>
         </Fade>
       </div>
-      <button className="items-center bg-gray-500 hover:bg-gray-700  text-white font-bold py-2 px-4 rounded-full shadow-md max-w-xs mx-auto">
-        Lets explore about the diseases 
-      </button>
+
+      <Link className="max-w-xs mx-auto" to="/diseases">
+        <button className="items-center bg-gray-700 hover:bg-black transform hover:scale-125 text-white font-bold py-2 px-4 rounded-full shadow-md max-w-xs mx-auto">
+          Lets explore about the diseases predicted using our model
+        </button>
+      </Link>
     </div>
   );
 };
